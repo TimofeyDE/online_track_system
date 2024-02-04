@@ -25,15 +25,15 @@ services:
       image: mysql:5.7
       container_name: mysql_db
       build:
-          context: .
-          dockerfile: mysql_image/Dockerfile
+          context: ./mysql_image
+          dockerfile: Dockerfile
       environment:
           MYSQL_ROOT_PASSWORD: rootpassword
           MYSQL_DATABASE: mysql
           MYSQL_USER: dartchain
           MYSQL_PASSWORD: bitcoin2008
       volumes:
-          - init-db.sql:/docker-entrypoint-initdb.d/init-db.sql  # Mount the init script
+          #- ./init-db.sql:/docker-entrypoint-initdb.d/init-db.sql  # Mount the init script
           - mysql-data:/var/lib/mysql
       ports:
         - "3307:3306"
