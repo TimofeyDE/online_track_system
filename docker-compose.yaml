@@ -1,0 +1,43 @@
+version: '3'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: server_image/Dockerfile
+    command: flask run --host=0.0.0.0
+    volumes:
+      - .:/app
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db
+    environment:
+      # Environment variables for database connection
+      - DATABASE_HOST=db
+      - DATABASE_USER=dartchain
+      - DATABASE_PASSWORD=bitcoin2008
+      - DATABASE_NAME=mysql
+      - FLASK_APP=app.py
+      - FLASK_RUN_HOST=0.0.0.0
+
+  db:
+      image: mysql:5.7
+      container_name: mysql_db
+      build:
+          context: .
+          dockerfile: mysql_image/Dockerfile
+      environment:
+          MYSQL_ROOT_PASSWORD: rootpassword
+          MYSQL_DATABASE: mysql
+          MYSQL_USER: dartchain
+          MYSQL_PASSWORD: bitcoin2008
+      volumes:
+          - init-db.sql:/docker-entrypoint-initdb.d/init-db.sql  # Mount the init script
+          - mysql-data:/var/lib/mysql
+      ports:
+        - "3307:3306"
+
+volumes:
+    mysql-data:
+
