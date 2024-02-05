@@ -1,4 +1,5 @@
 # Web Tracking System
+>Important Compatibility Note: This application and all associated deployment scripts are specifically tailored for the Ubuntu operating system and command environment. While Docker and Docker Compose facilitate some level of portability, the unique configurations and scripts provided here are optimized for Ubuntu and may not work as intended on other platforms.
 
 ## Project Overview
 The Online Track System is designed to provide real-time tracking and status updates for various entities. This system is particularly useful for applications requiring constant monitoring and updates, such as logistics, asset management, and personal tracking.
