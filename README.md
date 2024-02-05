@@ -21,8 +21,19 @@ Before you begin, ensure you have met the following requirements:
 
 ## Installation
 
-1. Clone the repository:
+#### 1. Clone the repository:
    ```
-   git clone [your-repository-link]
-   cd [repository-name]
+   git clone https://github.com/TimofeyDE/web_tracking_system.git
+   ```
+#### 2. Move to the directory:
+   ```
+   cd web_tracking_system
+   ```
+#### 3. To run the deployment of the server (Docker container is started in the background mode):
+   ```
+   ./server_deployment
+   ```
+#### 4. If you need to deploy the client side:
+   ```
+   sudo ./client_deployment
    ```
