@@ -33,17 +33,14 @@ sudo apt-get upgrade -y && sudo apt-get update -y
 #### 1. Clone the repository:
    ```
    git clone https://github.com/TimofeyDE/web_tracking_system.git
-   ```
-#### 2. Move to the directory:
-   ```
    cd web_tracking_system
    ```
-#### 3. To run the deployment of the server:
+#### 2. To run the deployment of the server:
 > Docker container is started in the background mode.
    ```
    ./server_deployment
    ```
-#### 4. If you need to deploy the client side:
+#### 3. If you need to deploy the client side:
 > The client is created as a daemon and started automatically when the system is boot up.
    ```
    sudo ./client_deployment
