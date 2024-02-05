@@ -25,7 +25,7 @@ Before you begin, ensure you have met the following requirements:
 - Install [Docker](https://docs.docker.com/engine/install/ubuntu/) and [Docker Compose](https://docs.docker.com/compose/install/linux/).
 - Install Python 3.12
 ```
-sudo apt-get install
+sudo apt-get install python3.12
 sudo apt-get upgrade -y && sudo apt-get update -y
 ```
 
