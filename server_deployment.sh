@@ -1,9 +1,6 @@
 #!/bin/bash
 
-# 
-sudo docker-compose pull 
-
-DOCKER_BUILDKIT=1
+sudo docker-compose pull
 
 # Build a Docker
 sudo docker-compose build

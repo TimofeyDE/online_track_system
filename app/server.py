@@ -1,13 +1,7 @@
-from flask import Blueprint, jsonify, Flask, request
+from flask import Blueprint, jsonify, request
 from .database import *
 
 server_blueprint = Blueprint('server', __name__)
-
-@server_blueprint.route('/')
-def index():
-    # Example endpoint that uses a database connection
-    # Perform database operations...
-    return jsonify({"message": "Hello, World!"})
 
 @server_blueprint.route("/update", methods=['POST'])
 def update():
@@ -33,9 +27,4 @@ def update():
 def status():
     clients = fetch_clients()
     return jsonify(clients), 200
-
-
-@server_blueprint.before_request
-def init_db():
-    create_table(mysql)
 

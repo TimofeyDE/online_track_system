@@ -2,10 +2,10 @@
 FROM python:3.12-slim
 
 # Set the working directory in the project
-WORKDIR /app
+WORKDIR app/
 
 # Copy the current directory contents into the container at /app
-COPY ./app /app
+COPY . /app
 
 # Install system dependencies required for compiling mysqlclient
 RUN apt-get update && apt-get install -y \
@@ -16,7 +16,9 @@ RUN apt-get update && apt-get install -y \
     && apt-get clean
 
 # Install needed packages specified in requirements.txt
-COPY ./requirements.txt /app/
+COPY requirements.txt /app/
+
+RUN python3 -m pip install --upgrade pip
 
 # Install any needed packages specified in requirements.txt
 RUN pip3 install --no-cache-dir -r requirements.txt
@@ -25,7 +27,7 @@ RUN pip3 install --no-cache-dir -r requirements.txt
 EXPOSE 5000
 
 # Define environment variable
-ENV FLASK_APP=main.py
+ENV FLASK_APP=app.py
 ENV FLASK_RUN_HOST=0.0.0.0
 
 # Run Flask app when the container launches
