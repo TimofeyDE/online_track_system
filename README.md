@@ -19,11 +19,11 @@ The Online Track System is designed to provide real-time tracking and status upd
 ## Prerequisites
 Before you begin, ensure you have met the following requirements:
 - Docker and Docker Compose installed on your machine
-- Python 3.12 or higher
+- Python 3 or higher
 
 ## Preinstallation:
 - Install [Docker](https://docs.docker.com/engine/install/ubuntu/) and [Docker Compose](https://docs.docker.com/compose/install/linux/).
-- Install Python 3.12
+- Install Python 3
 ```
 sudo apt-get install python3
 sudo apt-get upgrade -y && sudo apt-get update -y
