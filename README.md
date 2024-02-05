@@ -1,4 +1,4 @@
-# Online Track System
+# Web Tracking System
 
 ## Project Overview
 The Online Track System is designed to provide real-time tracking and status updates for various entities. This system is particularly useful for applications requiring constant monitoring and updates, such as logistics, asset management, and personal tracking.
@@ -6,6 +6,7 @@ The Online Track System is designed to provide real-time tracking and status upd
 ## Table of Contents
 - [Features](#features)
 - [Prerequisites](#prerequisites)
+- [Preinstallation](#preinstallation)
 - [Installation](#installation)
 
 ## Features
@@ -19,8 +20,15 @@ Before you begin, ensure you have met the following requirements:
 - Docker and Docker Compose installed on your machine
 - Python 3.12 or higher
 
-## Installation
+## Preinstallation:
+- Install [Docker](https://docs.docker.com/engine/install/ubuntu/) and [Docker Compose](https://docs.docker.com/compose/install/linux/).
+- Install Python 3.12
+```
+sudo apt-get install
+sudo apt-get upgrade -y && sudo apt-get update -y
+```
 
+## Installation
 #### 1. Clone the repository:
    ```
    git clone https://github.com/TimofeyDE/web_tracking_system.git
