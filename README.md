@@ -29,11 +29,13 @@ Before you begin, ensure you have met the following requirements:
    ```
    cd web_tracking_system
    ```
-#### 3. To run the deployment of the server (Docker container is started in the background mode):
+#### 3. To run the deployment of the server:
+> Docker container is started in the background mode.
    ```
    ./server_deployment
    ```
 #### 4. If you need to deploy the client side:
+> The client is created as a daemon and started automatically when the system is boot up.
    ```
    sudo ./client_deployment
    ```
